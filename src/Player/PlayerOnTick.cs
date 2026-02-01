@@ -90,10 +90,8 @@ namespace SharpTimer
                                                 $"{((playerButtons & PlayerButtons.Forward) != 0 ? "W" : "_")} " +
                                                 $"{((playerButtons & PlayerButtons.Moveright) != 0 ? "D" : "_")} " +
                                                 $"{((playerButtons & PlayerButtons.Back) != 0 ? "S" : "_")} " +
-                                                $"{((playerButtons & PlayerButtons.Jump) != 0 || playerTimer.MovementService!.OldJumpPressed ? "J" : "_")} " +
+                                                $"{((playerButtons & PlayerButtons.Jump) != 0 ? "J" : "_")} " +
                                                 $"{((playerButtons & PlayerButtons.Duck) != 0 ? "C" : "_")}";
-
-                        if (playerTimer.MovementService!.OldJumpPressed == true) playerTimer.MovementService.OldJumpPressed = false;
 
                         string hudContent = (hudEnabled ? timerLine + veloLine + infoLine : "") +
                                             (keyEnabled ? keysLineNoHtml : "") +
@@ -125,7 +123,7 @@ namespace SharpTimer
                             CheckPlayerTriggerPushCoords(player, playerSpeed);
                         }
 
-                        if (jumpStatsEnabled == true) OnJumpStatTick(player, playerSpeed, player.Pawn?.Value!.CBodyComponent?.SceneNode!.AbsOrigin!, player.PlayerPawn?.Value.EyeAngles!, playerButtons);
+                        if (jumpStatsEnabled == true && player.PlayerPawn?.Value.EyeAngles != null) OnJumpStatTick(player, playerSpeed, player.Pawn?.Value!.CBodyComponent?.SceneNode!.AbsOrigin!, player.PlayerPawn?.Value.EyeAngles!, playerButtons);
 
                         if (forcePlayerSpeedEnabled == true)
                         {
@@ -286,10 +284,8 @@ namespace SharpTimer
                                             $"{((playerButtons & PlayerButtons.Forward) != 0 ? "W" : "_")} " +
                                             $"{((playerButtons & PlayerButtons.Moveright) != 0 ? "D" : "_")} " +
                                             $"{((playerButtons & PlayerButtons.Back) != 0 ? "S" : "_")} " +
-                                            $"{((playerButtons & PlayerButtons.Jump) != 0 || playerTimer.MovementService!.OldJumpPressed ? "J" : "_")} " +
+                                            $"{((playerButtons & PlayerButtons.Jump) != 0 ? "J" : "_")} " +
                                             $"{((playerButtons & PlayerButtons.Duck) != 0 ? "C" : "_")}";
-
-                    if (playerTimer.MovementService!.OldJumpPressed == true) playerTimer.MovementService.OldJumpPressed = false;
 
                     string hudContent = (hudEnabled ? timerLine + veloLine + infoLine : "") +
                                         (keyEnabled ? keysLineNoHtml : "") +
