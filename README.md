@@ -1,4 +1,4 @@
-> [!WARNING]  
+> [!Attention]  
 > This Project is fixed as of date 2026-02-01
 
 
@@ -149,4 +149,5 @@ SharpTimer is a "simple" Surf/KZ/Bhop/MG/Deathrun/etc. CS2 Timer plugin using Co
 
 
 ## Author: [@dea_bb](https://twitter.com/dea_bb)
+
 
