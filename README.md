@@ -1,5 +1,5 @@
 > [!WARNING]  
-> This Project is discontinued. Feel free to fork it and build upon it.
+> This Project is fixed as of date 2026-02-01
 
 
 # SharpTimer
@@ -149,3 +149,4 @@ SharpTimer is a "simple" Surf/KZ/Bhop/MG/Deathrun/etc. CS2 Timer plugin using Co
 
 
 ## Author: [@dea_bb](https://twitter.com/dea_bb)
+
